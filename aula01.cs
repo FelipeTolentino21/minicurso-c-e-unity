@@ -211,9 +211,9 @@ public class main{
         /*
         double resultado;
         
-        Console.Write("Insira o valor de X e Y\nX:");
+        Console.Write("Insira o valor de X e Y\nX: ");
         double x = double.Parse(Console.ReadLine());
-        Console.Write("Y:");
+        Console.Write("Y: ");
         double y = double.Parse(Console.ReadLine());
         
         Console.Write("Escolha qual operação quer fazer\n(1) - Soma\n(2) - Subtracao\n(3) - Divisao\n(4) - Multiplicacao\nEscolha: ");
@@ -244,5 +244,30 @@ public class main{
             break;
         }
         */
+        // Exercício 13: Leia 2 valores com uma casa decimal (x e y), que devem representar as coordenadas de um ponto em um plano. A seguir, determine qual o quadrante ao qual pertence o ponto, ou se está sobre um dos eixos cartesianos ou na origem  (x = y = 0). Se o ponto estiver na origem, escreva a mensagem “Origem”. Se o ponto estiver sobre um dos eixos escreva “Eixo X” ou “Eixo Y”, conforme for a situação.
+        /*
+        Console.Write("Insira o valor de X e Y para determinar um ponto (X,Y)\nX: ");
+        double x = double.Parse(Console.ReadLine());
+        Console.Write("Y: ");
+        double y = double.Parse(Console.ReadLine());
+        
+        if(x==0&&y==0){
+            Console.WriteLine($"O ponto ({Convert.ToDecimal(x).ToString("0.0")},{Convert.ToDecimal(y).ToString("0.0")}) esta na origem");
+        } else if (x==0 && y!=0){
+            Console.WriteLine($"O ponto ({Convert.ToDecimal(x).ToString("0.0")},{Convert.ToDecimal(y).ToString("0.0")}) esta no eixo X");
+        } else if (x!=0 && y==0){
+            Console.WriteLine($"O ponto ({Convert.ToDecimal(x).ToString("0.0")},{Convert.ToDecimal(y).ToString("0.0")}) esta no eixo Y");
+        } else if (x>0 && y>0){
+            Console.WriteLine($"O ponto ({Convert.ToDecimal(x).ToString("0.0")},{Convert.ToDecimal(y).ToString("0.0")}) esta no primeiro quadrante");
+        } else if (x<0 && y>0){
+            Console.WriteLine($"O ponto ({Convert.ToDecimal(x).ToString("0.0")},{Convert.ToDecimal(y).ToString("0.0")}) esta no segundo quadrante");
+        } else if (x<0 && y<0){
+            Console.WriteLine($"O ponto ({Convert.ToDecimal(x).ToString("0.0")},{Convert.ToDecimal(y).ToString("0.0")}) esta no terceiro quadrante");
+        } else if (x>0 && y<0){
+            Console.WriteLine($"O ponto ({Convert.ToDecimal(x).ToString("0.0")},{Convert.ToDecimal(y).ToString("0.0")}) esta no quarto quadrante");
+        }
+        */
+        // Exercício 14: Escreva um programa que repita a leitura de uma senha até que ela seja válida. Para cada leitura de senha incorreta informada, escrever a mensagem "Senha Inválida". Quando a senha for informada corretamente deve ser impressa a mensagem "Acesso Permitido" e o algoritmo encerrado. Considere que a senha correta é o valor 2002.
+        }
     }
 }
