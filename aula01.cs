@@ -268,5 +268,187 @@ public class main{
         }
         */
         // Exercício 14: Escreva um programa que repita a leitura de uma senha até que ela seja válida. Para cada leitura de senha incorreta informada, escrever a mensagem "Senha Inválida". Quando a senha for informada corretamente deve ser impressa a mensagem "Acesso Permitido" e o algoritmo encerrado. Considere que a senha correta é o valor 2002.
+        /*
+        string tentativa = "";
+        
+        Console.Write("Defina uma senha: ");
+        string senha = Console.ReadLine();
+        
+        while(tentativa!=senha){
+            Console.Write("Tente acertar a senha: ");
+            tentativa = Console.ReadLine();
+            if(tentativa!=senha){
+                Console.WriteLine("Senha invalida");
+            } else {
+                Console.WriteLine("Acesso Permitido");
+            }
+        }
+        */
+        // Exercício 15: Um Posto de combustíveis deseja determinar qual de seus produtos tem a preferência de seus clientes. Escreva um algoritmo para ler o tipo de combustível abastecido (codificado da seguinte forma: 1.Álcool 2.Gasolina 3.Diesel 4.Fim). Caso o usuário informe um código inválido (fora da faixa de 1 a 4) deve ser solicitado um novo código (até que seja válido). O programa será encerrado quando o código informado for o número 4. Deve ser escrito a mensagem: "MUITO OBRIGADO" e a quantidade de clientes que abasteceram cada tipo de combustível, conforme exemplo.
+        /*
+        int preferencia = 0;
+        int alcool = 0;
+        int gasolina = 0;
+        int diesel = 0;
+        
+        Console.WriteLine("Preferencia de combustivel abastecido!\nInsira o numero correspondente a o tipo de combustivel que o cliente prefere:\n(1) - Alcool\n(2) - Gasolina\n(3) - Diesel\n(4) - Fim");
+
+        while(preferencia!=4){
+            Console.Write("Escolha: ");
+            preferencia = int.Parse(Console.ReadLine());
+            if(preferencia<1 || preferencia>4){
+                Console.WriteLine("O numero inserido e invalido! Tente novamente!");
+                continue;
+            } else {
+                if(preferencia==1){
+                    alcool++;
+                } else if(preferencia==2){
+                    gasolina++;
+                } else if(preferencia==3){
+                    diesel++;
+                }
+            }
+        }
+        Console.Write($"MUITO OBRIGADO!\nAlcool: {alcool}\nGasolina: {gasolina}\nDiesel: {diesel}");
+        */
+        // Exercicio 16: Achar o maior e o menor número de uma série de números inteiros positivos fornecidos pelo usuário via teclado. O programa deve solicitar valores até que o usuário entre com -1. (Usando while e condicionais)
+        /*
+        int escolha = 0;
+        int menor = int.MaxValue;
+        int maior = 0;
+        
+        Console.WriteLine("Digite valores inteiros e positivos para saber o maior e o menor deles\nDigite (-1) para sair");
+
+        while(escolha!=-1){
+            Console.Write("Escolha: ");
+            escolha = int.Parse(Console.ReadLine());
+            
+            if(escolha==-1){
+                break;
+            } else if(escolha<-1){
+                Console.WriteLine("Escolha um valor inteiro e positivo!");
+                continue;
+            }
+            
+            if(escolha<menor) {
+                menor = escolha;
+            }
+            if(escolha>maior) {
+                maior = escolha;
+            }
+        }
+        Console.Write($"\nMaior valor: {maior}\nMenor valor: {menor}");
+        */
+        // Exercício 17: Escreva um algoritmo que solicita ao usuário valores inteiros positivos N e conta a quantidade de números pares e ímpares digitados. Quando o usuário digitar o valor -1 o programa deve parar. O algoritmo deve mostrar ao final o total de números pares e ímpares digitados. (Usando do ... while)
+        /*
+        int escolha = 0;
+        int pares = 0;
+        int impares = 0;
+        
+        Console.WriteLine("Digite valores inteiros e positivos para saber o quantos sao pares ou impares\nDigite (-1) para sair");
+
+        do {
+            Console.Write("Escolha: ");
+            escolha = int.Parse(Console.ReadLine());
+            
+            if(escolha==-1){
+                break;
+            } else if(escolha<-1){
+                Console.WriteLine("Escolha um valor inteiro e positivo!");
+                continue;
+            }
+            
+            if(escolha%2==0) {
+                pares++;
+            } else {
+                impares++;
+            }
+        } while(escolha!=-1);
+        
+        Console.Write($"\nPares: {pares}\nImpares: {impares}");
+        */
+        // Exercicio 18: Fazer um programa para ler uma temperatura em Celsius e mostrar o equivalente em Fahrenheit. Perguntar se o usuário deseja repetir (s/n). Caso o usuário digite "s", repetir o programa.
+        /*
+        double c = 0;
+        char escolha = 's';
+        
+        Console.Write("Conversor de Celsius para Fahrenheit\n");
+        
+        while(escolha!='n'){
+            Console.Write("Digite a temperatura: ");
+            c = double.Parse(Console.ReadLine());
+            Console.WriteLine($"Equivalente em Fahrenheit: {Convert.ToDecimal(((9*c)/5)+32).ToString("0.0")}");
+            Console.Write("Deseja repetir(s/n)? ");
+            escolha = char.Parse(Console.ReadLine());
+        }
+        */
+        // Exercicios 19: Leia um valor inteiro N. Este valor será a quantidade de valores inteiros X que serão lidos em seguida. Mostre quantos destes valores X estão dentro do intervalo [10,20] e quantos estão fora do intervalo, mostrando essas informações
+        /*
+        int dentro = 0;
+        int fora = 0;
+        
+        Console.WriteLine("Digite um valor N\nEsse valor vai ser quantos numeros você vai digitar");
+        int N = int.Parse(Console.ReadLine());
+        
+        for(int i=0;i<N;i++){
+            Console.Write("Digite um valor: ");
+            int x = int.Parse(Console.ReadLine());
+            if(x>=10 && x<=20){
+                dentro++;
+            } else {
+                fora++;
+            }
+        }
+        Console.Write($"Valores dentro do intervalo [10,20]: {dentro}\nValores fora do intervallo[10,20]: {fora}");
+        */
+        // Exercício 20: Leia um valor inteiro X. Em seguida mostre os ímpares de 1 até X, um valor por linha, inclusive o X, se for o caso.
+        /*
+        Console.WriteLine("Digite um valor N\nEsse valor vai ser quantos numeros impares vai aparecer");
+        int N = int.Parse(Console.ReadLine());
+        Console.Write("\n");
+        for(int i=0;i<N;i++){
+            if(i%2!=0){
+                Console.WriteLine(i);
+            }
+        }
+        */
+        // Exercício 21: Ler um número inteiro N e calcular todos os seus divisores.
+        /*
+        Console.WriteLine("Digite um valor N\nEsse valor vai ser quantos divisores um numero tem");
+        int N = int.Parse(Console.ReadLine());
+        Console.Write("\n");
+        for(int i=1;i<=N;i++){
+            if(N%i==0){
+                Console.WriteLine(i);
+            }
+        }
+        */
+        // Exercicio 22: Ler um valor N. Calcular e escrever seu respectivo fatorial. Fatorial de N = N * (N-1) * (N-2) * (N-3) * ... * 1. Lembrando que, por definição, fatorial de 0 é 1.
+        /*
+        int fatorial = 1;
+        
+        Console.WriteLine("Digite um valor N\nSera feito o fatorial desse valor");
+        int N = int.Parse(Console.ReadLine());
+        if(N==0){
+            Console.WriteLine(1);
+        } else {
+            for(int i=1;i<=N;i++){
+                fatorial*=i;
+            }
+            Console.WriteLine("Resultado: " + fatorial);
+        }
+        */
+        // Exercicio 23: Fazer um programa para ler um número inteiro positivo N. O programa deve então mostrar na tela N linhas, começando de 1 até N. Para cada linha, mostrar o número da linha, depois o quadrado e o cubo do valor, conforme exemplo.
+        /*
+        int quadrado = 0;
+        int cubo = 0;
+        Console.WriteLine("Digite um valor N\n");
+        int N = int.Parse(Console.ReadLine());
+        for(int i=1;i<=N;i++){
+            quadrado = (i*i);
+            cubo = (i*i*i);
+            Console.WriteLine($"{i} {quadrado} {cubo}");
+        }
+        */
     }
 }
