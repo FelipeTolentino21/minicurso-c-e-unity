@@ -45,7 +45,7 @@ public class main{
 
         return media;
     }*/ //função do exercício 6
-        public static string RemoverVogais(string texto) {
+        /*public static string RemoverVogais(string texto) {
         string resultado = "";
         foreach (char c in texto) {
             if (!"AEIOUaeiouÁÉÍÓÚáéíóú".Contains(c)) {
@@ -54,9 +54,8 @@ public class main{
         }
         return resultado;
     }
-        
+        */
     static void Main(){
-        //Função do exercício 7
             
     // Exercício 1: Faça uma função que aceita 2 inteiros e retorna a multiplicação. 
        /* int a, b;
@@ -113,17 +112,16 @@ public class main{
     string letraParaSubstituir = Console.ReadLine();
     
     Console.Write($"Aqui esta sua nova frase: " + frase.Replace(letraAnterior, letraParaSubstituir));
-    */ //Exercício 6: Escreva um programa que receba uma string e remova todas as vogais. Informe ao usuário o resultado.
-        Console.WriteLine("Digite uma frase:");
+    */ 
+    //Exercício 6: Escreva um programa que receba uma string e remova todas as vogais. Informe ao usuário o resultado.
+       /* Console.WriteLine("Digite uma frase:");
         string texto = Console.ReadLine();
 
         string resultado = RemoverVogais(texto);
 
-        Console.WriteLine($"Sua frase sem vogais: {resultado}");
-        
-    //Exercício 7 fazer um programa para ler um número inteiro N e a altura de N pessoas. Armazene as N alturas em um vetor. Em seguida, mostrar a altura média dessas pessoas.
-    /*
-    double soma = 0;
+        Console.WriteLine($"Sua frase sem vogais: {resultado}");*/
+    //Exercício 7: Fazer um programa para ler um número inteiro N e a altura de N pessoas. Armazene as N alturas em um vetor. Em seguida, mostrar a altura média dessas pessoas.
+     /* double soma = 0;
     
     Console.Write("Insira o numero de pessoas que quer fazer a média da altura: ");
     int n = int.Parse(Console.ReadLine());
@@ -135,9 +133,94 @@ public class main{
         soma += alturas[i];
     }
     double media = soma/n;
-    Console.Write($"A média das alturas ficou: {Convert.ToDecimal(media).ToString("0.00")}");
-    */ //Exercício 8: Faça um programa que leia um número inteiro positivo N (máximo = 10) e depois N números inteiros e armazene-os em um vetor. Em seguida, mostrar na tela todos os números negativos lidos. 
+    Console.Write($"A média das alturas ficou: {Convert.ToDecimal(media).ToString("0.00")}");*/
         
+    //Exercício 8 fazer um programa para ler um número inteiro N e a altura de N pessoas. Armazene as N alturas em um vetor. Em seguida, mostrar a altura média dessas pessoas.
+       /* int N;
+        do
+        {
+            Console.WriteLine("Digite a quantidade de números (entre 1 e 10):");
+            N = int.Parse(Console.ReadLine());
+            if (N < 1 || N > 10)
+            {
+                Console.WriteLine("Número inválido. Insira um valor entre 1 e 10.");
+            }
+        } while (N < 1 || N > 10);
+        int[] numeros = new int[N];
+        for (int i = 0; i < N; i++) {
+            Console.WriteLine($"Digite o número {i + 1}:");
+            numeros[i] = int.Parse(Console.ReadLine());
+        }
+        Console.WriteLine("Números negativos:");
+        bool encontrouNegativos = false;
+        for (int i = 0; i < N; i++){
+            if (numeros[i] < 0){
+                Console.WriteLine(numeros[i]);
+                encontrouNegativos = true;
+            }
+        }
+        if (!encontrouNegativos){
+            Console.WriteLine("Nenhum número negativo foi lido.");
+        } */
+    //Exercício 9: Faça um programa que leia N números reais e armazene-os em um vetor. Em seguida: - Imprimir todos os elementos do vetor - Mostrar na tela a soma e a média dos elementos do vetor  
+      /*  Console.WriteLine("Digite a quantidade de números:");
+        int N = int.Parse(Console.ReadLine());
+        double[] numeros = new double[N];
+        for (int i = 0; i < N; i++) {
+            Console.WriteLine($"Digite o número {i + 1}:");
+            numeros[i] = double.Parse(Console.ReadLine());
+        }
+        Console.WriteLine("Elementos do vetor:");
+        foreach (double numero in numeros) {
+            Console.WriteLine(numero);
+        }
+        double soma = 0;
+        for (int i = 0; i < N; i++) {
+            soma += numeros[i];
+        }
+        double media = soma / N;
+        Console.WriteLine($"Soma dos elementos: {soma}");
+        Console.WriteLine($"Média dos elementos: {media}"); 
+        */
+    //Exercício 10: Faça um programa que leia N números reais e armazene-os em um vetor. Em seguida, mostrar na tela o maior número do vetor (supor não haver empates). Mostrar também a posição do maior elemento, considerando a primeira posição como 0 (zero)
+        /*Console.WriteLine("Digite a quantidade de números:");
+        int N = int.Parse(Console.ReadLine());
+        double[] numeros = new double[N];
+
+        for (int i = 0; i < N; i++) {
+            Console.WriteLine($"Digite o número {i + 1}:");
+            numeros[i] = double.Parse(Console.ReadLine());
+        }
+        double maiorNumero = numeros[0];
+        int posicaoMaior = 0;
+        for (int i = 1; i < N; i++) {
+            if (numeros[i] > maiorNumero) {
+                maiorNumero = numeros[i];
+                posicaoMaior = i;
+            }
+        }
+        Console.WriteLine($"O maior número é: {maiorNumero}");
+        Console.WriteLine($"A posição do maior número é: {posicaoMaior+1}");*/
+    //Exercício 11: Fazer um programa para ler um conjunto de nomes de pessoas e suas respectivas idades. Os nomes devem ser armazenados em um vetor, e as idades em um outro vetor. Depois, mostrar na tela o nome da pessoa mais velha.  
+       /* Console.WriteLine("Digite a quantidade de pessoas:");
+        int N = int.Parse(Console.ReadLine());
+        string[] nomes = new string[N];
+        int[] idades = new int[N];
+        for (int i = 0; i < N; i++) {
+            Console.WriteLine($"Digite o nome da pessoa {i + 1}:");
+            nomes[i] = Console.ReadLine();
+            Console.WriteLine($"Digite a idade de {nomes[i]}:");
+            idades[i] = int.Parse(Console.ReadLine());
+        }
+        int idadeMaisVelha = idades[0];
+        int indiceMaisVelha = 0;
+        for (int i = 1; i < N; i++) {
+            if (idades[i] > idadeMaisVelha) {
+                idadeMaisVelha = idades[i];
+                indiceMaisVelha = i;
+            }
+        }
+        Console.WriteLine($"A pessoa mais velha é: {nomes[indiceMaisVelha]} com {idadeMaisVelha} anos.");*/
     /*
     Faça um algoritmo que preencha uma matriz 3x3 de inteiros e escreva: 
     a) a soma dos números ímpares fornecidos; 
